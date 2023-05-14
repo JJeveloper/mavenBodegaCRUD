@@ -6,14 +6,15 @@ package com.mycompany.view;
  */
 public class JefeBodegaPrincipalView extends javax.swing.JFrame {
 
+    private ReciboView recibo = new ReciboView();
+    
     /**
      * Creates new form PanelPrincipalView
      */
     public JefeBodegaPrincipalView() {
         initComponents();
-        this.setLocationRelativeTo(this);
+        this.setLocationRelativeTo(null);
         this.setResizable(false);
-
     }
 
     @SuppressWarnings("unchecked")
@@ -21,9 +22,10 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
     private void initComponents() {
 
         panPanelMenuPrincipal = new javax.swing.JPanel();
-        btnAgregar = new javax.swing.JButton();
+        btnProveedor = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         lblUsuario = new javax.swing.JLabel();
+        btnRecibo = new javax.swing.JButton();
         dkpPrincipal = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -32,22 +34,32 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
         panPanelMenuPrincipal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panPanelMenuPrincipal.setPreferredSize(new java.awt.Dimension(97, 665));
 
-        btnAgregar.setBackground(new java.awt.Color(94, 202, 242));
-        btnAgregar.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregar.setText("Agregar");
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+        btnProveedor.setBackground(new java.awt.Color(94, 202, 242));
+        btnProveedor.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btnProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        btnProveedor.setText("Proveedor");
+        btnProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
+                btnProveedorActionPerformed(evt);
             }
         });
 
         btnSalir.setBackground(new java.awt.Color(94, 202, 242));
-        btnSalir.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        btnSalir.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setText("Salir");
 
         lblUsuario.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        btnRecibo.setBackground(new java.awt.Color(94, 202, 242));
+        btnRecibo.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btnRecibo.setForeground(new java.awt.Color(255, 255, 255));
+        btnRecibo.setText("Recibo");
+        btnRecibo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReciboActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panPanelMenuPrincipalLayout = new javax.swing.GroupLayout(panPanelMenuPrincipal);
         panPanelMenuPrincipal.setLayout(panPanelMenuPrincipalLayout);
@@ -58,7 +70,8 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
                 .addGroup(panPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                     .addComponent(lblUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
-                    .addComponent(btnAgregar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
+                    .addComponent(btnProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                    .addComponent(btnRecibo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panPanelMenuPrincipalLayout.setVerticalGroup(
@@ -66,8 +79,10 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
             .addGroup(panPanelMenuPrincipalLayout.createSequentialGroup()
                 .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 485, Short.MAX_VALUE)
+                .addComponent(btnProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(btnRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 434, Short.MAX_VALUE)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -104,15 +119,32 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
 
+    private void btnProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedorActionPerformed
 
-    }//GEN-LAST:event_btnAgregarActionPerformed
+        dkpPrincipal.removeAll();
+        dkpPrincipal.repaint();
+        AgregarProveedorView agregarProveedor = new AgregarProveedorView();
+        agregarProveedor.setVisible(true);
+        dkpPrincipal.add(agregarProveedor);
+
+    }//GEN-LAST:event_btnProveedorActionPerformed
+    
+    private void btnReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReciboActionPerformed
+
+        dkpPrincipal.removeAll();
+        dkpPrincipal.repaint();
+        
+        recibo.setVisible(true);
+        dkpPrincipal.add(recibo);
+        
+    }//GEN-LAST:event_btnReciboActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnProveedor;
+    private javax.swing.JButton btnRecibo;
     public javax.swing.JButton btnSalir;
-    public javax.swing.JDesktopPane dkpPrincipal;
+    public static javax.swing.JDesktopPane dkpPrincipal;
     public javax.swing.JLabel lblUsuario;
     public javax.swing.JPanel panPanelMenuPrincipal;
     // End of variables declaration//GEN-END:variables

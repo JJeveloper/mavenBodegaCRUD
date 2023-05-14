@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  */
 public class LoginView extends javax.swing.JFrame {
 
-    ArrayList<EmpleadoEntity> listaE;
+    protected static ArrayList<EmpleadoEntity> listaE;
 
     /**
      * Creates new form LoginView
@@ -116,7 +116,6 @@ public class LoginView extends javax.swing.JFrame {
 
             if (!listaE.isEmpty()) {
 
-                //Diseno JefeBodegaPrincipalView
                 //Rol Gerente
                 if (listaE.get(0).getRol_idrol() == 1) {
 
@@ -127,21 +126,9 @@ public class LoginView extends javax.swing.JFrame {
 
                     this.dispose();
 
-                    JefeBodegaPrincipalView jefe_bodega_principal = new JefeBodegaPrincipalView();
-
-                    jefe_bodega_principal.setVisible(true);
-                    jefe_bodega_principal.setLocationRelativeTo(this);
-                    jefe_bodega_principal.setSize(865, 665);
-
-                    jefe_bodega_principal.panPanelMenuPrincipal.setSize(90, 626);
-
-                    jefe_bodega_principal.btnAgregar.setSize(87, 50);
-                    jefe_bodega_principal.lblUsuario.setSize(87, 50);
-                    jefe_bodega_principal.lblUsuario.setText(listaE.get(0).getNombres());
-
-                    jefe_bodega_principal.btnSalir.setSize(87, 50);
-
-                    jefe_bodega_principal.dkpPrincipal.setSize(775, 626);
+                    JefeBodegaPrincipalView principal = new JefeBodegaPrincipalView();
+                    principal.setVisible(true);
+                    principal.lblUsuario.setText(listaE.get(0).getNombres());
 
                 }
 

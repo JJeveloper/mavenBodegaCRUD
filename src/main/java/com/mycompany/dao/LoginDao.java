@@ -1,6 +1,6 @@
 package com.mycompany.dao;
 
-import com.mycompany.conection.ConectioBD.ConectionBD;
+import com.mycompany.conection.ConectionBD;
 import com.mycompany.entity.EmpleadoEntity;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +13,7 @@ public class LoginDao {
 
     public ArrayList ingresoBD(String u, String p) {
 
-        String query = "SELECT * FROM empleado WHERE cedula = ? AND pass = md5(?);";
+        String query = "SELECT * FROM empleado WHERE cedula = ? AND pass = sha1(?);";
         PreparedStatement ps;
         ResultSet rs;
 
