@@ -10,16 +10,11 @@ import com.mycompany.entity.ReciboEntity;
 import com.mycompany.entity.TipoProductoEntity;
 import java.awt.Toolkit;
 import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -507,6 +502,15 @@ public class ReciboView extends javax.swing.JInternalFrame {
             guardarProductos();
             detalleRecibo();
 
+            this.dispose();
+
+            ReporteRecibo rc = new ReporteRecibo();
+
+            try {
+                rc.crearDocumento(date, lblProveedor.getText(), tblProductos);
+            } catch (Exception e) {
+            }
+
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione primero un proveedor", "", JOptionPane.INFORMATION_MESSAGE);
         }
@@ -547,11 +551,10 @@ public class ReciboView extends javax.swing.JInternalFrame {
         return idTipoProducto + "" + codProducto + "" + codRecibo + "" + idTipoProveedor;
     }
 
-    public void guardarRecibo() {
+    long miliseconds = System.currentTimeMillis();
+    Date date = new Date(miliseconds);
 
-        long miliseconds = System.currentTimeMillis();
-        Date date = new Date(miliseconds);
-        System.out.println("date " + date);
+    public void guardarRecibo() {
 
         reciboE.setcodigoRecibo(codRecibo + "");
         reciboE.setFechaRecibo(date);
