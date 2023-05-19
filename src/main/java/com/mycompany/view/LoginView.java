@@ -119,13 +119,17 @@ public class LoginView extends javax.swing.JFrame {
                 //Rol Gerente
                 if (listaE.get(0).getRol_idrol() == 1) {
 
+                    this.dispose();
+                    AdminPrincipalView principal = new AdminPrincipalView();
+                    principal.setVisible(true);
+                    principal.lblUsuario.setText(listaE.get(0).getNombres());
+
                 }
 
                 //Rol jefe bodega
                 if (listaE.get(0).getRol_idrol() == 2) {
 
                     this.dispose();
-
                     JefeBodegaPrincipalView principal = new JefeBodegaPrincipalView();
                     principal.setVisible(true);
                     principal.lblUsuario.setText(listaE.get(0).getNombres());

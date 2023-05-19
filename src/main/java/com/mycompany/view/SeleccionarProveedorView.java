@@ -10,7 +10,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class SeleccionarProveedorView extends javax.swing.JInternalFrame {
 
-//    private ReciboView reciboV = new ReciboView();
     /**
      * Creates new form SeleccionarProveedor
      */
@@ -75,6 +74,7 @@ public class SeleccionarProveedorView extends javax.swing.JInternalFrame {
         });
 
         btnSeleccionar.setBackground(new java.awt.Color(0, 0, 255));
+        btnSeleccionar.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         btnSeleccionar.setForeground(new java.awt.Color(255, 255, 255));
         btnSeleccionar.setText("Seleccione Proveedor");
         btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +106,7 @@ public class SeleccionarProveedorView extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSeleccionar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

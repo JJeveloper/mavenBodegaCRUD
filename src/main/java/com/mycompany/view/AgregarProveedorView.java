@@ -203,7 +203,7 @@ public class AgregarProveedorView extends javax.swing.JInternalFrame {
 
                     if (add) {
 
-                        this.dispose();
+                        limpiar();
 
                     }
 
@@ -233,10 +233,10 @@ public class AgregarProveedorView extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     public void limpiar() {
-        txtDocumento.getText();
-        txtNombre.getText();
-        txtTelefono.getText();
-        txtCorreo.getText();
+        txtDocumento.setText("");
+        txtNombre.setText("");
+        txtTelefono.setText("");
+        txtCorreo.setText("");
     }
 
     public boolean validarCedulaRuc(String docum) {

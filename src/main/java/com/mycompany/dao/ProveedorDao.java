@@ -70,8 +70,6 @@ public class ProveedorDao {
 //
 //        return listaP;
 //    }
-    
-    
 //    public DefaultTableModel mostrarTablaProveedor(JTable t) {
 //
 //        DefaultTableModel tblModelo = new DefaultTableModel();
@@ -118,7 +116,6 @@ public class ProveedorDao {
 //
 //        return tblModelo;
 //    }
-
     public DefaultTableModel buscarProveedorXDocumentoNombre(String texto) {
 
         DefaultTableModel tblModelo = new DefaultTableModel();
@@ -144,9 +141,9 @@ public class ProveedorDao {
                 fila[0] = rs.getInt("idproveedor");
 
                 if (rs.getInt("tipodocumento_idtipodocumento") == 1) {
-                    fila[1] = "Cedula";
+                    fila[1] = "cedula";
                 } else {
-                    fila[1] = "Ruc";
+                    fila[1] = "ruc";
                 }
 
                 fila[2] = rs.getString("documento");
@@ -161,6 +158,34 @@ public class ProveedorDao {
         }
 
         return tblModelo;
+    }
+
+    public void actualizarProveedor(ProveedorEntity proveedorE) {
+
+        String query = "UPDATE proveedor SET documento = ?, nombreproveedor = ?, telefono = ?, correo = ?, tipodocumento_idtipodocumento = ? WHERE documento = ?";
+
+        PreparedStatement ps;
+        ResultSet rs;
+
+        try {
+            ps = ConectionBD.connect().prepareStatement(query);
+            ps.setString(1, proveedorE.getDocumento());
+            ps.setString(2, proveedorE.getNombreproveedor());
+            ps.setString(3, proveedorE.getTelefono());
+            ps.setString(4, proveedorE.getCorreo());
+            ps.setInt(5, proveedorE.getIdtipodocumento());
+            ps.setString(6, proveedorE.getDocumento());
+            int yes = ps.executeUpdate();
+
+            if (yes == 1) {
+                JOptionPane.showMessageDialog(null, "Se actualizaron con exito", "Proveedor", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se pudo realizar la actualizacion", "Proveedor", JOptionPane.ERROR_MESSAGE);
+            System.out.println("ee " + e);
+        }
+
     }
 
 }
