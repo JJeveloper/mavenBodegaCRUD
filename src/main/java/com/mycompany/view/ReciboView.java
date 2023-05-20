@@ -391,7 +391,7 @@ public class ReciboView extends javax.swing.JInternalFrame {
 
                 tbl.addRow(fila);
 
-//                limpiar();
+                limpiar();
             } else {
                 JOptionPane.showMessageDialog(null, "Ingrese los datos solicitados", "Campos obligatorios", JOptionPane.INFORMATION_MESSAGE);
             }
@@ -404,13 +404,25 @@ public class ReciboView extends javax.swing.JInternalFrame {
 
     private void btnSelecionarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecionarProveedorActionPerformed
 
-        JefeBodegaPrincipalView.dkpPrincipal.removeAll();
-        JefeBodegaPrincipalView.dkpPrincipal.repaint();
-
         SeleccionarProveedorView seleccionarP = new SeleccionarProveedorView();
-        seleccionarP.setVisible(true);
 
-        JefeBodegaPrincipalView.dkpPrincipal.add(seleccionarP);
+        if (LoginView.listaE.get(0).getRol_idrol() == 2) {
+            
+            JefeBodegaPrincipalView.dkpPrincipalJefeB.removeAll();
+            JefeBodegaPrincipalView.dkpPrincipalJefeB.repaint();
+            seleccionarP.setVisible(true);
+            JefeBodegaPrincipalView.dkpPrincipalJefeB.add(seleccionarP);
+        }
+
+        if (LoginView.listaE.get(0).getRol_idrol() == 1) {
+            
+            AdminPrincipalView.dkpPrincipalAdmin.removeAll();
+            AdminPrincipalView.dkpPrincipalAdmin.repaint();
+            seleccionarP.setVisible(true);
+            AdminPrincipalView.dkpPrincipalAdmin.add(seleccionarP);
+        }
+
+
     }//GEN-LAST:event_btnSelecionarProveedorActionPerformed
 
     private void txtPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPrecioKeyTyped

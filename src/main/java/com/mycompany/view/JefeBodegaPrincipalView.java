@@ -7,8 +7,7 @@ import com.mycompany.conection.ConectionBD;
  * @author JJAB
  */
 public class JefeBodegaPrincipalView extends javax.swing.JFrame {
-
-    private ReciboView recibo = new ReciboView();
+    
 
     /**
      * Creates new form PanelPrincipalView
@@ -28,7 +27,7 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
         btnSalir = new javax.swing.JButton();
         lblUsuario = new javax.swing.JLabel();
         btnRecibo = new javax.swing.JButton();
-        dkpPrincipal = new javax.swing.JDesktopPane();
+        dkpPrincipalJefeB = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,18 +92,18 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        dkpPrincipal.setBackground(new java.awt.Color(204, 204, 255));
-        dkpPrincipal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        dkpPrincipal.setPreferredSize(new java.awt.Dimension(775, 665));
+        dkpPrincipalJefeB.setBackground(new java.awt.Color(204, 204, 255));
+        dkpPrincipalJefeB.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        dkpPrincipalJefeB.setPreferredSize(new java.awt.Dimension(775, 665));
 
-        javax.swing.GroupLayout dkpPrincipalLayout = new javax.swing.GroupLayout(dkpPrincipal);
-        dkpPrincipal.setLayout(dkpPrincipalLayout);
-        dkpPrincipalLayout.setHorizontalGroup(
-            dkpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout dkpPrincipalJefeBLayout = new javax.swing.GroupLayout(dkpPrincipalJefeB);
+        dkpPrincipalJefeB.setLayout(dkpPrincipalJefeBLayout);
+        dkpPrincipalJefeBLayout.setHorizontalGroup(
+            dkpPrincipalJefeBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 771, Short.MAX_VALUE)
         );
-        dkpPrincipalLayout.setVerticalGroup(
-            dkpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        dkpPrincipalJefeBLayout.setVerticalGroup(
+            dkpPrincipalJefeBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 661, Short.MAX_VALUE)
         );
 
@@ -115,12 +114,12 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(panPanelMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(dkpPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(dkpPrincipalJefeB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panPanelMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(dkpPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dkpPrincipalJefeB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -129,21 +128,22 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
 
     private void btnProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedorActionPerformed
 
-        dkpPrincipal.removeAll();
-        dkpPrincipal.repaint();
+        dkpPrincipalJefeB.removeAll();
+        dkpPrincipalJefeB.repaint();
         AgregarProveedorView agregarProveedor = new AgregarProveedorView();
         agregarProveedor.setVisible(true);
-        dkpPrincipal.add(agregarProveedor);
+        dkpPrincipalJefeB.add(agregarProveedor);
 
     }//GEN-LAST:event_btnProveedorActionPerformed
 
     private void btnReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReciboActionPerformed
 
-        dkpPrincipal.removeAll();
-        dkpPrincipal.repaint();
+        dkpPrincipalJefeB.removeAll();
+        dkpPrincipalJefeB.repaint();
 
+        ReciboView recibo = new ReciboView();
         recibo.setVisible(true);
-        dkpPrincipal.add(recibo);
+        dkpPrincipalJefeB.add(recibo);
 
     }//GEN-LAST:event_btnReciboActionPerformed
 
@@ -159,7 +159,7 @@ public class JefeBodegaPrincipalView extends javax.swing.JFrame {
     private javax.swing.JButton btnProveedor;
     private javax.swing.JButton btnRecibo;
     public javax.swing.JButton btnSalir;
-    public static javax.swing.JDesktopPane dkpPrincipal;
+    public static javax.swing.JDesktopPane dkpPrincipalJefeB;
     public javax.swing.JLabel lblUsuario;
     public javax.swing.JPanel panPanelMenuPrincipal;
     // End of variables declaration//GEN-END:variables

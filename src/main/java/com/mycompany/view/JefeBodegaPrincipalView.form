@@ -26,14 +26,14 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="panPanelMenuPrincipal" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-              <Component id="dkpPrincipal" max="32767" attributes="0"/>
+              <Component id="dkpPrincipalJefeB" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="panPanelMenuPrincipal" max="32767" attributes="0"/>
-          <Component id="dkpPrincipal" alignment="0" max="32767" attributes="0"/>
+          <Component id="dkpPrincipalJefeB" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -152,7 +152,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JDesktopPane" name="dkpPrincipal">
+    <Container class="javax.swing.JDesktopPane" name="dkpPrincipalJefeB">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="cc" red="cc" type="rgb"/>

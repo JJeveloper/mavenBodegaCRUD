@@ -111,6 +111,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bodega`.`recibo` (
   `idrecibo` INT NOT NULL AUTO_INCREMENT,
+  `codigorecibo` VARCHAR(45) NOT NULL,
   `fecharecido` DATE NOT NULL,
   `proveedor_idproveedor` INT NOT NULL,
   `empleado_idempleado` INT NOT NULL,
@@ -152,7 +153,6 @@ CREATE TABLE IF NOT EXISTS `bodega`.`detallerecibo` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
 use bodega;
 -- rol
 INSERT INTO `bodega`.`rol` (`rol`) VALUES ('admin'),('jefe bodega');
@@ -165,6 +165,8 @@ INSERT INTO `bodega`.`empleado` (`cedula`, `nombres`, `apellidos`, `pass`, `rol_
 -- jefe de bodega
 INSERT INTO `bodega`.`proveedor` (`documento`, `nombreproveedor`, `telefono`, `correo`, `tipodocumento_idtipodocumento`) VALUES 
 ('0508745214', 'Sarita plus', '0985241201', 'faby@gmail.com', '1');
+-- tipo de producto
+INSERT INTO `bodega`.`tipoproducto` (`tipoproducto`) VALUES ('bebidas'),('carnes'),('frutas verduras'),('enlataodos'),('embutidos'),('dulces');
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

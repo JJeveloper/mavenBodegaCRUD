@@ -26,19 +26,19 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="panPanelMenuPrincipal" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-              <Component id="dkpPrincipal" max="32767" attributes="0"/>
+              <Component id="dkpPrincipalAdmin" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="panPanelMenuPrincipal" alignment="0" max="32767" attributes="0"/>
-          <Component id="dkpPrincipal" alignment="0" max="32767" attributes="0"/>
+          <Component id="dkpPrincipalAdmin" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JDesktopPane" name="dkpPrincipal">
+    <Container class="javax.swing.JDesktopPane" name="dkpPrincipalAdmin">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="cc" red="cc" type="rgb"/>
@@ -97,7 +97,7 @@
                       <Component id="lblUsuario" alignment="0" pref="87" max="32767" attributes="0"/>
                       <Component id="btnProveedor" alignment="0" pref="87" max="32767" attributes="0"/>
                       <Component id="btnRecibo" alignment="0" pref="87" max="32767" attributes="0"/>
-                      <Component id="btnRecibo1" alignment="0" pref="87" max="32767" attributes="0"/>
+                      <Component id="btnActualizar" alignment="0" pref="87" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -112,7 +112,7 @@
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Component id="btnRecibo" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                  <Component id="btnRecibo1" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btnActualizar" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace pref="383" max="32767" attributes="0"/>
                   <Component id="btnSalir" min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
@@ -184,7 +184,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReciboActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnRecibo1">
+        <Component class="javax.swing.JButton" name="btnActualizar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f2" green="ca" red="5e" type="rgb"/>
@@ -198,7 +198,7 @@
             <Property name="text" type="java.lang.String" value="Actualizar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRecibo1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnActualizarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

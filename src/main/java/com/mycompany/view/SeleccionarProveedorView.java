@@ -132,14 +132,21 @@ public class SeleccionarProveedorView extends javax.swing.JInternalFrame {
             idproveedor = tblProveedor.getValueAt(fila, 0).toString();
             datosProveedor = tblProveedor.getValueAt(fila, 2).toString() + " - " + tblProveedor.getValueAt(fila, 3).toString();
 
-            JefeBodegaPrincipalView.dkpPrincipal.removeAll();
-            JefeBodegaPrincipalView.dkpPrincipal.repaint();
-
             ReciboView reciboV = new ReciboView();
 
-            reciboV.setVisible(true);
+            if (LoginView.listaE.get(0).getRol_idrol() == 1) {
+                AdminPrincipalView.dkpPrincipalAdmin.removeAll();
+                AdminPrincipalView.dkpPrincipalAdmin.repaint();
+                reciboV.setVisible(true);
+                AdminPrincipalView.dkpPrincipalAdmin.add(reciboV);
+            }
 
-            JefeBodegaPrincipalView.dkpPrincipal.add(reciboV);
+            if (LoginView.listaE.get(0).getRol_idrol() == 2) {
+                JefeBodegaPrincipalView.dkpPrincipalJefeB.removeAll();
+                JefeBodegaPrincipalView.dkpPrincipalJefeB.repaint();
+                reciboV.setVisible(true);
+                JefeBodegaPrincipalView.dkpPrincipalJefeB.add(reciboV);
+            }
 
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione una fila", "Tabla Proveedor", JOptionPane.INFORMATION_MESSAGE);

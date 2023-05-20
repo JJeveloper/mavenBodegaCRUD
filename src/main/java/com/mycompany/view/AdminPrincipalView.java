@@ -8,7 +8,6 @@ import com.mycompany.conection.ConectionBD;
  */
 public class AdminPrincipalView extends javax.swing.JFrame {
 
-    private ReciboView recibo = new ReciboView();
 
     /**
      * Creates new form AdminPrincipal
@@ -28,28 +27,28 @@ public class AdminPrincipalView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dkpPrincipal = new javax.swing.JDesktopPane();
+        dkpPrincipalAdmin = new javax.swing.JDesktopPane();
         panPanelMenuPrincipal = new javax.swing.JPanel();
         btnProveedor = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         lblUsuario = new javax.swing.JLabel();
         btnRecibo = new javax.swing.JButton();
-        btnRecibo1 = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        dkpPrincipal.setBackground(new java.awt.Color(204, 204, 255));
-        dkpPrincipal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        dkpPrincipal.setPreferredSize(new java.awt.Dimension(775, 665));
+        dkpPrincipalAdmin.setBackground(new java.awt.Color(204, 204, 255));
+        dkpPrincipalAdmin.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        dkpPrincipalAdmin.setPreferredSize(new java.awt.Dimension(775, 665));
 
-        javax.swing.GroupLayout dkpPrincipalLayout = new javax.swing.GroupLayout(dkpPrincipal);
-        dkpPrincipal.setLayout(dkpPrincipalLayout);
-        dkpPrincipalLayout.setHorizontalGroup(
-            dkpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout dkpPrincipalAdminLayout = new javax.swing.GroupLayout(dkpPrincipalAdmin);
+        dkpPrincipalAdmin.setLayout(dkpPrincipalAdminLayout);
+        dkpPrincipalAdminLayout.setHorizontalGroup(
+            dkpPrincipalAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 771, Short.MAX_VALUE)
         );
-        dkpPrincipalLayout.setVerticalGroup(
-            dkpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        dkpPrincipalAdminLayout.setVerticalGroup(
+            dkpPrincipalAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 661, Short.MAX_VALUE)
         );
 
@@ -89,13 +88,13 @@ public class AdminPrincipalView extends javax.swing.JFrame {
             }
         });
 
-        btnRecibo1.setBackground(new java.awt.Color(94, 202, 242));
-        btnRecibo1.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        btnRecibo1.setForeground(new java.awt.Color(255, 255, 255));
-        btnRecibo1.setText("Actualizar");
-        btnRecibo1.addActionListener(new java.awt.event.ActionListener() {
+        btnActualizar.setBackground(new java.awt.Color(94, 202, 242));
+        btnActualizar.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setText("Actualizar");
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRecibo1ActionPerformed(evt);
+                btnActualizarActionPerformed(evt);
             }
         });
 
@@ -110,7 +109,7 @@ public class AdminPrincipalView extends javax.swing.JFrame {
                     .addComponent(lblUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                     .addComponent(btnProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                     .addComponent(btnRecibo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
-                    .addComponent(btnRecibo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
+                    .addComponent(btnActualizar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panPanelMenuPrincipalLayout.setVerticalGroup(
@@ -122,7 +121,7 @@ public class AdminPrincipalView extends javax.swing.JFrame {
                 .addGap(1, 1, 1)
                 .addComponent(btnRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
-                .addComponent(btnRecibo1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 383, Short.MAX_VALUE)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -134,12 +133,12 @@ public class AdminPrincipalView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(panPanelMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(dkpPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(dkpPrincipalAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panPanelMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(dkpPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dkpPrincipalAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -147,21 +146,21 @@ public class AdminPrincipalView extends javax.swing.JFrame {
 
     private void btnProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedorActionPerformed
 
-        dkpPrincipal.removeAll();
-        dkpPrincipal.repaint();
+        dkpPrincipalAdmin.removeAll();
+        dkpPrincipalAdmin.repaint();
         AgregarProveedorView agregarProveedor = new AgregarProveedorView();
         agregarProveedor.setVisible(true);
-        dkpPrincipal.add(agregarProveedor);
+        dkpPrincipalAdmin.add(agregarProveedor);
 
     }//GEN-LAST:event_btnProveedorActionPerformed
 
     private void btnReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReciboActionPerformed
-        dkpPrincipal.removeAll();
-        dkpPrincipal.repaint();
+        dkpPrincipalAdmin.removeAll();
+        dkpPrincipalAdmin.repaint();
 
+        ReciboView recibo = new ReciboView();
         recibo.setVisible(true);
-        dkpPrincipal.add(recibo);
-
+        dkpPrincipalAdmin.add(recibo);
     }//GEN-LAST:event_btnReciboActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -172,13 +171,13 @@ public class AdminPrincipalView extends javax.swing.JFrame {
         lg.setVisible(true);
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void btnRecibo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecibo1ActionPerformed
-        dkpPrincipal.removeAll();
-        dkpPrincipal.repaint();
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+        dkpPrincipalAdmin.removeAll();
+        dkpPrincipalAdmin.repaint();
         AdminProveedoresView adminProveedores = new AdminProveedoresView();
         adminProveedores.setVisible(true);
-        dkpPrincipal.add(adminProveedores);
-    }//GEN-LAST:event_btnRecibo1ActionPerformed
+        dkpPrincipalAdmin.add(adminProveedores);
+    }//GEN-LAST:event_btnActualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,11 +216,11 @@ public class AdminPrincipalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnProveedor;
     private javax.swing.JButton btnRecibo;
-    private javax.swing.JButton btnRecibo1;
     public javax.swing.JButton btnSalir;
-    public static javax.swing.JDesktopPane dkpPrincipal;
+    public static javax.swing.JDesktopPane dkpPrincipalAdmin;
     public javax.swing.JLabel lblUsuario;
     public javax.swing.JPanel panPanelMenuPrincipal;
     // End of variables declaration//GEN-END:variables
